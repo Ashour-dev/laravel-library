@@ -14,10 +14,7 @@ class AddForeignKeyToBooks extends Migration
     public function up()
     {
         Schema::table('books', function (Blueprint $table) {
-            // $table->engine = "InnoDB";
-            // $table->unsignedBigInteger('Author_id');
-            $table->foreignId('Author_id')->constrained()->onDelete('set null');
-            // ->references('id')->on('Authors')
+            $table->foreignId('Author_id')->constrained()->onDelete('cascade');
         });
     }
 
@@ -30,7 +27,6 @@ class AddForeignKeyToBooks extends Migration
     {
         Schema::table('books', function (Blueprint $table) {
             $table->dropForeign(['Author_id']);
-            // $table->dropColumn('Author_id');
         });
     }
 }
