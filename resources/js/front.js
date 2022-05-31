@@ -15,7 +15,7 @@ const router = new VueRouter({
     routes:[
         {
             path:'/books',
-            name:'books',
+            name:'Books',
             component:Books
         }
 ]

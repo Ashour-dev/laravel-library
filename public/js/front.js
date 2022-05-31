@@ -18817,7 +18817,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
   mode: 'history',
   routes: [{
     path: '/books',
-    name: 'books',
+    name: 'Books',
     component: _pages_Books__WEBPACK_IMPORTED_MODULE_3__["default"]
   }]
 });
