@@ -14,6 +14,9 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang="scss" scoped>
+    @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,300;1,200;1,300&display=swap');
+    *   {
+        font-family: 'Raleway', sans-serif;
+    }
 </style>

@@ -21,7 +21,7 @@ class BookSeeder extends Seeder
         for ($i=0; $i < 200; $i++) { 
             $newBook= new Book();
             $newBook->name=$faker->words(2,true);
-            $newBook->cover='https://picsum.photos/id/' . rand(1,1000) . '/200/300';
+            $newBook->cover='https://picsum.photos/id/' . rand(1,1000) . '/250/350';
             $newBook->lang=$faker->languageCode();
             $newBook->format=$formats[rand(0,2)];
             $newBook->pages_number=rand(50,1000);

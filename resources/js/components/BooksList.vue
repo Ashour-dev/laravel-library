@@ -1,7 +1,8 @@
 <template>
-    <div>
-        <h1>Testing</h1>
-        <Book v-for="(book, index) in books" :key="index" :book="book"/>
+    <div class="wrapper">
+        <div class="cards">
+            <Book v-for="(book, index) in books" :key="index" :book="book"/>
+        </div>
     </div>
 </template>
 
@@ -32,6 +33,19 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #1a2530;
+.cards {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}
 
 </style>
