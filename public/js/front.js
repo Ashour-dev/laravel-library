@@ -1926,7 +1926,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Book',
   props: ['book']
@@ -2104,7 +2103,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".card[data-v-1b1c1554] {\n  margin: 40px;\n  position: relative;\n  width: 250px;\n  height: 350px;\n  box-shadow: 0 40px 60px -6px black;\n}\n.card-title h1[data-v-1b1c1554] {\n  color: black;\n  font-weight: 300;\n}\n.card img[data-v-1b1c1554] {\n  width: 100%;\n  height: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n  display: block;\n  position: relative;\n}\n.card-desc[data-v-1b1c1554] {\n  display: block;\n  font-size: 1.2rem;\n  width: 100%;\n  position: absolute;\n  height: 0;\n  top: 0;\n  opacity: 0;\n  padding: 18px 8%;\n  background-color: white;\n  transition: 0.8s ease;\n}\n.card-desc span[data-v-1b1c1554] {\n  display: block;\n  color: white;\n}\n.card:hover .card-desc[data-v-1b1c1554] {\n  opacity: 1;\n  height: 100%;\n}\nh1[data-v-1b1c1554] {\n  font-size: 2.8rem;\n  color: #fff;\n  margin: 40px 0 20px 0;\n  text-align: center;\n}", ""]);
+exports.push([module.i, ".card[data-v-1b1c1554] {\n  margin: 40px;\n  position: relative;\n  width: 250px;\n  height: 350px;\n  box-shadow: 0 40px 60px -6px black;\n}\n.card-title h1[data-v-1b1c1554] {\n  color: black;\n}\n.card img[data-v-1b1c1554] {\n  width: 100%;\n  height: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n  display: block;\n  position: relative;\n}\n.card-desc[data-v-1b1c1554] {\n  display: block;\n  font-size: 1.2rem;\n  width: 100%;\n  position: absolute;\n  height: 0;\n  top: 0;\n  opacity: 0;\n  padding: 18px 8%;\n  transition: 0.8s ease;\n}\n.card-desc span[data-v-1b1c1554] {\n  display: block;\n  color: white;\n}\n.card:hover .card-desc[data-v-1b1c1554] {\n  opacity: 1;\n  height: 100%;\n}", ""]);
 
 // exports
 
@@ -3394,7 +3393,7 @@ var render = function () {
         "div",
         {
           staticClass:
-            "card-title w-100 position-absolute top-0 start-50 translate-middle ",
+            "card-title w-100 position-absolute top-0 start-50 translate-middle pt-4",
         },
         [
           _c("h1", { staticClass: "text-center" }, [

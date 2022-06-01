@@ -1,9 +1,8 @@
 <template>
     <div class="wrapper">
-        <!-- <span>{{book.name}}</span> -->
             <div class="card">
                 <img :src="book.cover" :alt="book.name">
-                <div class="card-title w-100 position-absolute top-0 start-50 translate-middle ">
+                <div class="card-title w-100 position-absolute top-0 start-50 translate-middle pt-4">
                     <h1 class="text-center">{{book.name}}</h1>
                 </div>
                 <p class="card-desc bg-dark">
@@ -37,7 +36,6 @@ export default {
 .card-title {
     h1{
         color: black;
-        font-weight: 300;
     }
 }
 
@@ -58,24 +56,14 @@ export default {
     top: 0;
     opacity: 0;
     padding: 18px 8%;
-    background-color: white;
     transition: 0.8s ease;
         span{
             display: block;
             color: white;
         }
 }
-
 .card:hover .card-desc {
     opacity: 1;
     height: 100%;
 }
-
-h1 {
-    font-size: 2.8rem;
-    color: #fff;
-    margin: 40px 0 20px 0;
-    text-align: center;
-}
-
 </style>
