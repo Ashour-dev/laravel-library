@@ -7,10 +7,10 @@
                 </div>
                 <p class="card-desc bg-dark">
                     <span class="name">Name: {{book.name}}</span>
-                    <span class="name">Lang: {{book.lang}}</span>
-                    <span class="name">Format: {{book.format}}</span>
-                    <span class="name">Num. of pages: {{book.pages_number}}</span>
-                    <span class="name">Author: {{book.author.first_name}} {{book.author.last_name}}</span>
+                    <span class="lang">Lang:<img :alt="book.lang" :src="'https://unpkg.com/language-icons/icons/'+ book.lang +'.svg'"/></span>
+                    <span class="Format">Format: {{book.format}}</span>
+                    <span class="numPages">Num. of pages: {{book.pages_number}}</span>
+                    <span class="AuthorName">Author: {{book.author.first_name}} {{book.author.last_name}}</span>
                 </p>
             </div>
         </div>
@@ -65,5 +65,13 @@ export default {
 .card:hover .card-desc {
     opacity: 1;
     height: 100%;
+}
+.lang{
+    img{
+        display: inline-block;
+        width: 2rem;
+        height: 2rem;
+        margin-left: .5rem;
+    }
 }
 </style>

@@ -1989,6 +1989,10 @@ __webpack_require__.r(__webpack_exports__);
       })["catch"](function (error) {
         console.error(error);
       });
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
     }
   },
   created: function created() {
@@ -2249,7 +2253,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".wrapper[data-v-a95e4e2a] {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  flex-direction: column;\n  background-color: #1a2530;\n}\n.wrapper .cards[data-v-a95e4e2a] {\n  width: 100%;\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-around;\n}", ""]);
+exports.push([module.i, ".wrapper[data-v-a95e4e2a] {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  flex-direction: column;\n  background-color: #1a2530;\n}\n.wrapper .cards[data-v-a95e4e2a] {\n  width: 100%;\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-around;\n}\n.page-item[data-v-a95e4e2a] {\n  cursor: pointer;\n}", ""]);
 
 // exports
 
@@ -2268,7 +2272,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".card[data-v-1b1c1554] {\n  margin: 40px;\n  position: relative;\n  width: 250px;\n  height: 350px;\n  box-shadow: 0 40px 60px -6px black;\n}\n.card-title h1[data-v-1b1c1554] {\n  color: black;\n}\n.card img[data-v-1b1c1554] {\n  width: 100%;\n  height: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n  display: block;\n  position: relative;\n}\n.card-desc[data-v-1b1c1554] {\n  display: block;\n  font-size: 1.2rem;\n  width: 100%;\n  position: absolute;\n  height: 0;\n  top: 0;\n  opacity: 0;\n  padding: 18px 8%;\n  transition: 0.8s ease;\n}\n.card-desc span[data-v-1b1c1554] {\n  display: block;\n  color: white;\n}\n.card:hover .card-desc[data-v-1b1c1554] {\n  opacity: 1;\n  height: 100%;\n}", ""]);
+exports.push([module.i, ".card[data-v-1b1c1554] {\n  margin: 40px;\n  position: relative;\n  width: 250px;\n  height: 350px;\n  box-shadow: 0 40px 60px -6px black;\n}\n.card-title h1[data-v-1b1c1554] {\n  color: black;\n}\n.card img[data-v-1b1c1554] {\n  width: 100%;\n  height: 100%;\n  -o-object-fit: cover;\n     object-fit: cover;\n  display: block;\n  position: relative;\n}\n.card-desc[data-v-1b1c1554] {\n  display: block;\n  font-size: 1.2rem;\n  width: 100%;\n  position: absolute;\n  height: 0;\n  top: 0;\n  opacity: 0;\n  padding: 18px 8%;\n  transition: 0.8s ease;\n}\n.card-desc span[data-v-1b1c1554] {\n  display: block;\n  color: white;\n}\n.card:hover .card-desc[data-v-1b1c1554] {\n  opacity: 1;\n  height: 100%;\n}\n.lang img[data-v-1b1c1554] {\n  display: inline-block;\n  width: 2rem;\n  height: 2rem;\n  margin-left: 0.5rem;\n}", ""]);
 
 // exports
 
@@ -3708,19 +3712,28 @@ var render = function () {
           _vm._v("Name: " + _vm._s(_vm.book.name)),
         ]),
         _vm._v(" "),
-        _c("span", { staticClass: "name" }, [
-          _vm._v("Lang: " + _vm._s(_vm.book.lang)),
+        _c("span", { staticClass: "lang" }, [
+          _vm._v("Lang:"),
+          _c("img", {
+            attrs: {
+              alt: _vm.book.lang,
+              src:
+                "https://unpkg.com/language-icons/icons/" +
+                _vm.book.lang +
+                ".svg",
+            },
+          }),
         ]),
         _vm._v(" "),
-        _c("span", { staticClass: "name" }, [
+        _c("span", { staticClass: "Format" }, [
           _vm._v("Format: " + _vm._s(_vm.book.format)),
         ]),
         _vm._v(" "),
-        _c("span", { staticClass: "name" }, [
+        _c("span", { staticClass: "numPages" }, [
           _vm._v("Num. of pages: " + _vm._s(_vm.book.pages_number)),
         ]),
         _vm._v(" "),
-        _c("span", { staticClass: "name" }, [
+        _c("span", { staticClass: "AuthorName" }, [
           _vm._v(
             "Author: " +
               _vm._s(_vm.book.author.first_name) +

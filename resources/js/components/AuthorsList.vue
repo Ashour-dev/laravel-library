@@ -50,6 +50,7 @@ export default {
             }).catch((error)=> {
                 console.error(error);
             });
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     },
     created(){
@@ -71,6 +72,9 @@ export default {
         flex-wrap: wrap;
         justify-content: space-around;
     }
+}
+.page-item{
+    cursor: pointer;
 }
 
 </style>
