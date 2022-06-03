@@ -1924,7 +1924,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Author',
-  props: ['author', 'AuthorsPics']
+  props: ['author', 'AuthorsPics', 'myKey']
 });
 
 /***/ }),
@@ -1979,13 +1979,12 @@ __webpack_require__.r(__webpack_exports__);
 
       axios.get("/api/authors?page=".concat(page)).then(function (response) {
         _this.Authors = response.data.data;
-        _this.pagination = response.data;
-        console.log(_this.Authors);
+        _this.pagination = response.data; // console.log(this.Authors);
       })["catch"](function (error) {
         console.error(error);
       });
-      axios.get("https://api.generated.photos/api/v1/faces?api_key=uC5eQJz9_KR-zBVWz2VNEA&&age=adult&&page=".concat(page)).then(function (response) {
-        _this.AuthorsPics = response.data;
+      axios.get("https://api.unsplash.com/search/photos?client_id=x7wuqYgBvdtaD-KAanKQUq-aFQPr1b0AgWKs2FAiwWM&&query=people-portrait&&page=".concat(page)).then(function (response) {
+        _this.AuthorsPics = response.data.results;
         console.log(_this.AuthorsPics);
       })["catch"](function (error) {
         console.error(error);
@@ -2110,6 +2109,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Header'
 });
@@ -2144,7 +2145,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _components_AuthorsList__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/AuthorsList */ "./resources/js/components/AuthorsList.vue");
+/* harmony import */ var _components_AuthorsList__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/AuthorsList */ "./resources/js/components/AuthorsList.vue");
 //
 //
 //
@@ -2155,7 +2156,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Authors',
   components: {
-    AuthorsList: _components_AuthorsList__WEBPACK_IMPORTED_MODULE_1__["default"]
+    AuthorsList: _components_AuthorsList__WEBPACK_IMPORTED_MODULE_0__["default"]
   }
 });
 
@@ -3565,7 +3566,7 @@ var render = function () {
     _c("div", { staticClass: "card" }, [
       _c("img", {
         attrs: {
-          src: _vm.AuthorsPics.faces[_vm.author.id].urls[4][512],
+          src: _vm.AuthorsPics[_vm.myKey].urls.full,
           alt: _vm.author.last_name,
         },
       }),
@@ -3616,7 +3617,7 @@ var render = function () {
       _vm._l(_vm.Authors, function (author, index) {
         return _c("Author", {
           key: index,
-          attrs: { author: author, AuthorsPics: _vm.AuthorsPics },
+          attrs: { myKey: index, author: author, AuthorsPics: _vm.AuthorsPics },
         })
       }),
       1
@@ -3809,6 +3810,24 @@ var render = function () {
                       attrs: { "aria-current": "page", to: { name: "Books" } },
                     },
                     [_vm._v("Books")]
+                  ),
+                ],
+                1
+              ),
+              _c(
+                "li",
+                { staticClass: "nav-item" },
+                [
+                  _c(
+                    "router-link",
+                    {
+                      staticClass: "nav-link active",
+                      attrs: {
+                        "aria-current": "page",
+                        to: { name: "Authors" },
+                      },
+                    },
+                    [_vm._v("Authors")]
                   ),
                 ],
                 1

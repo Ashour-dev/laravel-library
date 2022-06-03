@@ -1,7 +1,7 @@
 <template>
     <div class="wrapper">
             <div class="card">
-                <img :src="AuthorsPics.faces[author.id].urls[4][512]" :alt="author.last_name">
+                <img :src="AuthorsPics[myKey].urls.full" :alt="author.last_name">
                 <div class="card-title w-100 position-absolute top-0 start-50 translate-middle pt-4">
                     <h1 class="text-center">{{author.first_name}} {{author.last_name}}</h1>
                 </div>
@@ -15,7 +15,7 @@
 <script>
 export default {
     name:'Author',
-    props:['author','AuthorsPics'],
+    props:['author','AuthorsPics','myKey'],
 }
 </script>
 

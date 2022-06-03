@@ -13,6 +13,8 @@
                 </li>
                 <li class="nav-item">
                     <router-link class="nav-link active" aria-current="page" :to="{name:'Books'}">Books</router-link>
+                </li><li class="nav-item">
+                    <router-link class="nav-link active" aria-current="page" :to="{name:'Authors'}">Authors</router-link>
                 </li>
             </ul>
             </div>

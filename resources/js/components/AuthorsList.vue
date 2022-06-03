@@ -1,7 +1,7 @@
 <template>
     <div class="wrapper">
         <div class="cards">
-            <Author v-for="(author, index) in Authors" :key="index" :author="author" :AuthorsPics="AuthorsPics"/>
+            <Author v-for="(author, index) in Authors" :key="index" :myKey="index" :author="author" :AuthorsPics="AuthorsPics"/>
         </div>
         <nav aria-label="Page navigation">
             <ul class="pagination d-flex justify-content-center">
@@ -39,13 +39,13 @@ export default {
                 .then(response =>{
                     this.Authors=response.data.data;
                     this.pagination= response.data;
-                    console.log(this.Authors);
+                    // console.log(this.Authors);
             }).catch((error)=> {
                 console.error(error);
             });
-            axios.get(`https://api.generated.photos/api/v1/faces?api_key=uC5eQJz9_KR-zBVWz2VNEA&&age=adult&&page=${page}`)
+            axios.get(`https://api.unsplash.com/search/photos?client_id=x7wuqYgBvdtaD-KAanKQUq-aFQPr1b0AgWKs2FAiwWM&&query=people-portrait&&page=${page}`)
                 .then(response =>{
-                    this.AuthorsPics=response.data;
+                    this.AuthorsPics=response.data.results;
                     console.log(this.AuthorsPics);
             }).catch((error)=> {
                 console.error(error);
