@@ -13,4 +13,9 @@ class AuthorController extends Controller
         $Authors=Author::paginate(10);
         return response()->json($Authors);
     }
+    public function show($id)
+    {
+        $Author=Author::findOrFail($id);
+        return response()->json($Author);
+    }
 }
