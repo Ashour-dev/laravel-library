@@ -10,7 +10,7 @@
                     <span class="name">Lang: {{book.lang}}</span>
                     <span class="name">Format: {{book.format}}</span>
                     <span class="name">Num. of pages: {{book.pages_number}}</span>
-                    <!-- <span class="name">Author name: {{book.Author}}</span> -->
+                    <span class="name">Author: {{book.author.first_name}} {{book.author.last_name}}</span>
                 </p>
             </div>
         </div>

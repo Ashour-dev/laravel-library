@@ -8,6 +8,6 @@ class book extends Model
 {
     public function Author()
     {
-        return $this->belongsTo(Author::class);
+        return $this->belongsTo(Author::class,'Author_id');
     }
 }

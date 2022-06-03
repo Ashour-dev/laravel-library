@@ -3719,6 +3719,15 @@ var render = function () {
         _c("span", { staticClass: "name" }, [
           _vm._v("Num. of pages: " + _vm._s(_vm.book.pages_number)),
         ]),
+        _vm._v(" "),
+        _c("span", { staticClass: "name" }, [
+          _vm._v(
+            "Author: " +
+              _vm._s(_vm.book.author.first_name) +
+              " " +
+              _vm._s(_vm.book.author.last_name)
+          ),
+        ]),
       ]),
     ]),
   ])
