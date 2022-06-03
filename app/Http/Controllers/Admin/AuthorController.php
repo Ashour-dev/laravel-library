@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use App\Author;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 class AuthorController extends Controller
@@ -14,7 +15,8 @@ class AuthorController extends Controller
      */
     public function index()
     {
-        
+        $Authors=Author::paginate(15);
+        return view('admin.authors',compact('Authors'));
     }
 
     /**

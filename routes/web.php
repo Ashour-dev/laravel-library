@@ -26,6 +26,7 @@ Route::middleware('auth')
 ->group(function(){
     Route::get('/home', 'HomeController@index')->name('home');
     Route::resource('books','BookController');
+    Route::resource('authors','AuthorController');
 });
 Route::get('/{any}', function () {
     return view('guest.Home');
