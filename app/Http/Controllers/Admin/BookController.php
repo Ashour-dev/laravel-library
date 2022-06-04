@@ -41,6 +41,21 @@ class BookController extends Controller
     public function store(Request $request)
     {
         $data = $request->all();
+        $request->validate([
+            'name' => 'required|unique:books|max:255',
+            'cover' => 'required',
+            'lang' => 'required|max:3',
+            'format' => 'required',
+            'pages_number' => 'required|max:255',
+            'Author_id' => 'required',
+        ],
+        [
+            'name.unique'=>'This book is already registered',
+            'format.required' => 'You didn\'t choose an format',
+            'Author_id.required' => 'You didn\'t choose an Author',
+        ]
+    );
+
         $newBook= new Book();
         $newBook->name=$data['name'];
         $newBook->cover=$data['cover'];
