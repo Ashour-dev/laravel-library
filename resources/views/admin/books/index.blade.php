@@ -3,13 +3,13 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-10 mx-auto">   
+        <div class="col-11 mx-auto">   
             <table class="table table-hover">
                 <thead>
                     <tr>
                         <th scope="col">id</th>
-                        <th scope="col">Author_id</th>
-                        <th scope="col">name</th>
+                        <th scope="col">Book name</th>
+                        <th scope="col">Author</th>
                         <th scope="col">cover</th>
                         <th scope="col">lang</th>
                         <th scope="col">format</th>
@@ -22,8 +22,8 @@
                     @foreach ($books as $book)
                     <tr>
                         <th scope="row">{{$book['id']}}</th>
-                        <td>{{$book['Author_id']}}</td>
                         <td>{{$book['name']}}</td>
+                        <td>{{$book->Author->first_name}} {{$book->Author->last_name}}</td>
                         <td>{{$book['cover']}}</td>
                         <td>{{$book['lang']}}</td>
                         <td>{{$book['format']}}</td>
