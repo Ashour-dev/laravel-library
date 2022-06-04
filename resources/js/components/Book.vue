@@ -7,7 +7,7 @@
                 </div>
                 <p class="card-desc bg-dark">
                     <span class="name">Name: {{book.name}}</span>
-                    <span class="lang">Lang:<img :alt="book.lang" :src="'https://unpkg.com/language-icons/icons/'+ book.lang +'.svg'"/></span>
+                    <span class="lang">Lang:<img class="rounded-circle" :alt="book.lang" :src="'https://unpkg.com/language-icons/icons/'+ book.lang +'.svg'"/></span>
                     <span class="Format">Format: {{book.format}}</span>
                     <span class="numPages">Num. of pages: {{book.pages_number}}</span>
                     <span class="AuthorName">Author: {{book.author.first_name}} {{book.author.last_name}}</span>

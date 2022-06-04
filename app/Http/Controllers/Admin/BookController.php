@@ -40,7 +40,16 @@ class BookController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+        $newBook= new Book();
+        $newBook->name=$data['name'];
+        $newBook->cover=$data['cover'];
+        $newBook->lang=$data['lang'];
+        $newBook->format=$data['format'];
+        $newBook->pages_number=$data['pages_number'];
+        $newBook->Author_id=$data['Author_id'];
+        $newBook-> save();
+        return redirect()->route('admin.books.index');
     }
 
     /**

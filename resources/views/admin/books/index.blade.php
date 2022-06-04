@@ -1,10 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-11 mx-auto">   
-            <table class="table table-hover">
+<div class="container-fluid">
+    <div class="row w-100 justify-content-center">
+        <div class="col-11 mx-auto">
+            <table class="table w-100 table-hover text-center">
                 <thead>
                     <tr>
                         <th scope="col">id</th>
@@ -24,7 +24,7 @@
                         <th scope="row">{{$book['id']}}</th>
                         <td>{{$book['name']}}</td>
                         <td>{{$book->Author->first_name}} {{$book->Author->last_name}}</td>
-                        <td>{{$book['cover']}}</td>
+                        <td style="max-width: 17rem; overflow:hidden"><a href="{{$book['cover']}}">{{$book['cover']}}</a></td>
                         <td>{{$book['lang']}}</td>
                         <td>{{$book['format']}}</td>
                         <td>{{$book['pages_number']}}</td>
