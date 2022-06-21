@@ -4,6 +4,7 @@
 <div class="container-fluid">
     <div class="row w-100 justify-content-center">
         <div class="col-11 mx-auto">
+            <div class="cube mx-auto"><div></div><div></div><div></div><div></div><div></div><div></div></div>
             <table class="table w-100 table-hover text-center">
                 <thead>
                     <tr>
